@@ -1,6 +1,6 @@
 from .base import Base
 
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, Boolean
 
 
 class DataEvent(Base):
@@ -10,3 +10,5 @@ class DataEvent(Base):
     source = Column(String)
     event_name = Column(String)
     value = Column(String)
+    data_type = Column(String)
+    is_callable = Column(Boolean)

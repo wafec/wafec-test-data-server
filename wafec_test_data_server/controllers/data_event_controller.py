@@ -19,6 +19,8 @@ def post():
         data_event.source = request.json['source']
         data_event.event_name = request.json['event_name']
         data_event.value = request.json['value']
+        data_event.data_type = request.json['data_type']
+        data_event.is_callable = request.json['is_callable']
         session.add(data_event)
         session.commit()
         return jsonify({'id': data_event.id})
