@@ -12,3 +12,5 @@ class DataEvent(Base):
     value = Column(String)
     data_type = Column(String)
     is_callable = Column(Boolean)
+    remote_addr = Column(String)
+    process_name = Column(String)

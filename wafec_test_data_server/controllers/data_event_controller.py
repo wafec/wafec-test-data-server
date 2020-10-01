@@ -21,6 +21,8 @@ def post():
         data_event.value = request.json['value']
         data_event.data_type = request.json['data_type']
         data_event.is_callable = request.json['is_callable']
+        data_event.process_name = request.json['process_name']
+        data_event.remote_addr = request.remote_addr
         session.add(data_event)
         session.commit()
         return jsonify({'id': data_event.id})
